@@ -1,7 +1,5 @@
 SgEyRuby::Application.configure do
-  # Settings specified here will take precedence over those in config/application.rb.
-
-  ActionMailer::Base.default :content_type => "text/html"
+  # Settings specified here will take precedence over those in config/application.rb.undefined method `default_charset=' for ActionMailer::Base:Class
   
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.default_charset = "utf-8"
