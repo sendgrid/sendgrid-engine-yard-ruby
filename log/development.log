@@ -4154,3 +4154,785 @@ Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-08-07 00:44:19 
 
 
 Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-08-07 00:44:19 -0700
+
+
+Started POST "/parse" for 127.0.0.1 at 2013-08-07 00:59:59 -0700
+Processing by EmailsController#parse as HTML
+  Parameters: {"headers"=>"Received: by 127.0.0.1 with SMTP id JGPKJGpiig Wed, 07 Aug 2013 07:23:07 +0000 (UTC)\nReceived: from mail-pd0-f175.google.com (mail-pd0-f175.google.com [209.85.192.175]) by mx2.sendgrid.net (Postfix) with ESMTPS id 7FE501B2B035 for <mailer@rdioplaylist.thinkingserious.com>; Wed,  7 Aug 2013 07:23:07 +0000 (UTC)\nReceived: by mail-pd0-f175.google.com with SMTP id 5so1082400pdd.20 for <mailer@rdioplaylist.thinkingserious.com>; Wed, 07 Aug 2013 00:23:07 -0700 (PDT)\nDKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.com; s=ga1; h=mime-version:from:date:message-id:subject:to:content-type; bh=qN8FhfLsobMlylBQJye8Zi0lQZSVBp9FwCB1solbp28=; b=b0MRlfaTGvMelt28y9dp5gzXM+kGN91l1fkvfIlPvD5rdxlZJDu73vfQgs/zcK/X5V UTsbUaVXCjgGnbxA26KokP6woIERjTXLGibknslL4D9Lu6B0sIxnWgplKEZB16LQq9oi u51oJ5sKE3Cvf0Tal9lUomhn/YgzUUnRs1ug8=\nX-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=20120113; h=x-gm-message-state:mime-version:from:date:message-id:subject:to :content-type; bh=qN8FhfLsobMlylBQJye8Zi0lQZSVBp9FwCB1solbp28=; b=GPnLj62VhryYUXVDJnHxZZq9wpLfs1zyxxviQIkzp2z1XoxLaQfLFp7tfLn47ZCZja OfLLnxdbOeafcVkemNxyi2WsA9DRKEGRC36beXz8t2MzqO+cuw5+BeVdjq+Xl2xyRHBV LXAsLzPIz/s27FGFOPydb61JhCHHI7KhrT3Q8GfDGTTdVMq5ZjlSYvBOuOP+y+kdO408 aoy6Sejj5rPk9wWYIUiBfC694JzVnVL58c6uW0zXVoGbdRoq72/Jw7Rb3hQ4W/kc/ZG/ Z8b+gi/DAod5Aew7PVKK9R/mjvxL9gcRlZ/6FbuviD86LCXLm6PEH/bslYeakCv8xEuu qK9A==\nX-Gm-Message-State: ALoCoQmipsIMoxIf/Q+vSY6fYQd5dq7RJiZ2aM76RS4u4E50iA4fLwfXbBzbHOzuU0c3Sm7liPUU\nX-Received: by 10.66.231.3 with SMTP id tc3mr2819774pac.167.1375860186983; Wed, 07 Aug 2013 00:23:06 -0700 (PDT)\nMIME-Version: 1.0\nReceived: by 10.70.101.233 with HTTP; Wed, 7 Aug 2013 00:22:46 -0700 (PDT)\nFrom: Elmer Thomas SendGrid <elmer.thomas@sendgrid.com>\nDate: Wed, 7 Aug 2013 00:22:46 -0700\nMessage-ID: <CAD9pwO0qjf_Ljj7W7=i7pSh8MArShV1XpYdysv=xqsg+ERCpJw@mail.gmail.com>\nSubject: Hee Hee\nTo: mailer@rdioplaylist.thinkingserious.com\nContent-Type: multipart/alternative; boundary=047d7b15ab5db4c37304e35669a8\n", "dkim"=>"{@sendgrid.com : pass}", "to"=>"mailer@rdioplaylist.thinkingserious.com", "html"=>"<div dir=\"ltr\">Ha Ha<div><br></div></div>\n", "from"=>"Elmer Thomas SendGrid <elmer.thomas@sendgrid.com>", "text"=>"Ha Ha\n", "envelope"=>"{\"to\":[\"mailer@rdioplaylist.thinkingserious.com\"],\"from\":\"elmer.thomas@sendgrid.com\"}", "attachments"=>"0", "subject"=>"Hee Hee", "charsets"=>"{\"to\":\"UTF-8\",\"html\":\"ISO-8859-1\",\"subject\":\"UTF-8\",\"from\":\"UTF-8\",\"text\":\"ISO-8859-1\"}", "SPF"=>"pass"}
+  Rendered emailer/send_email.erb (0.3ms)
+
+Sent mail to elmer.thomas@sendgrid.com (10.4ms)
+Date: Wed, 07 Aug 2013 00:59:59 -0700
+From: elmer.thomas@sendgrid.com
+To: Elmer Thomas SendGrid <elmer.thomas@sendgrid.com>
+Message-ID: <5201fe7feca2_45013fc3d1f538e8488f2@Retina-MacBook-Pro-ThinkingSerious.local.mail>
+Subject: Thanks for signing up
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi ,
+
+Thanks for trying out SendGrid with EnginYard!
+
+With Best Regards,
+
+Elmer Thomas
+Completed 200 OK in 21ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/parse" for 127.0.0.1 at 2013-08-07 01:11:16 -0700
+Processing by EmailsController#parse as HTML
+  Parameters: {"dkim"=>"{@sendgrid.com : pass}", "envelope"=>"{\"to\":[\"testing1234@rdioplaylist.thinkingserious.com\"],\"from\":\"elmer.thomas@sendgrid.com\"}", "subject"=>"yeah buddy", "charsets"=>"{\"to\":\"UTF-8\",\"html\":\"ISO-8859-1\",\"subject\":\"UTF-8\",\"from\":\"UTF-8\",\"text\":\"ISO-8859-1\"}", "SPF"=>"pass", "headers"=>"Received: by 127.0.0.1 with SMTP id jsfwfUwKYJ Wed, 07 Aug 2013 06:36:17 +0000 (UTC)\nReceived: from mail-pb0-f42.google.com (mail-pb0-f42.google.com [209.85.160.42]) by mx4.sendgrid.net (Postfix) with ESMTPS id 1700619D40F1 for <testing1234@rdioplaylist.thinkingserious.com>; Wed,  7 Aug 2013 01:36:17 -0500 (CDT)\nReceived: by mail-pb0-f42.google.com with SMTP id un15so1514863pbc.1 for <testing1234@rdioplaylist.thinkingserious.com>; Tue, 06 Aug 2013 23:36:16 -0700 (PDT)\nDKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.com; s=ga1; h=mime-version:from:date:message-id:subject:to:content-type; bh=L+mv4xrd46RyMzNZnycijSmaKNEeNV/i/ZCPTFo1trg=; b=Sjd+6Yj/ykeyp0RhRqbI8X45UqCjRBjjf2nwkOYQAuQP0SnDI/LN4Buq5wRj3vBKJB r6Us0z4P64MoyRNGj/bkthEnMD8L15gwBbCs1JD/Z0m8eJ9Hhq/eA8W1tIguK1os2qNx Vzlx/wvPQ9Q6DsxgATV9FPBLbypf6UYd4fyFc=\nX-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=20120113; h=x-gm-message-state:mime-version:from:date:message-id:subject:to :content-type; bh=L+mv4xrd46RyMzNZnycijSmaKNEeNV/i/ZCPTFo1trg=; b=gRK7nvmdrybWdlPJkbHPEkbbaXBzjk8sk22b9rT3UNHcuxxsKXM0GL2JXOn4cljBW0 eKALLIz4PohqnLO7m6RqBSK2Bp8mJbp0Ecm8IJcri1lE8GWxqUvDlwnzuRjP95Dv++KJ +2+oky2NOf+z0W1peyviII6QbRucyJj4r9QLbw0BHt+wnj48JwdsaI0Z3Vz24uas6jth ZHs6STVJwootBuqgSaRSA2gv50wwysJNa+MnkoXVMySbVAMNZro8b0uOBKKtTTV4mBXy onZydtZHw9CLfHMokZuBO8sG2km6fe43AZI2HB1zN9omsTsmJy03Y1YVY0ll69Tw0TSM ny4A==\nX-Gm-Message-State: ALoCoQknnMeAdGXRjRuDWKOcwH/rbDbTmfi0n/KKkNM+RmpivJpbu9Nc8LYno2gusqPF5LRMc/9K\nX-Received: by 10.68.234.102 with SMTP id ud6mr2031144pbc.50.1375857376548; Tue, 06 Aug 2013 23:36:16 -0700 (PDT)\nMIME-Version: 1.0\nReceived: by 10.70.101.233 with HTTP; Tue, 6 Aug 2013 23:35:56 -0700 (PDT)\nFrom: Elmer Thomas SendGrid <elmer.thomas@sendgrid.com>\nDate: Tue, 6 Aug 2013 23:35:56 -0700\nMessage-ID: <CAD9pwO2ShS4QSTzp0kH=tN_SpaEVoGCMM1ny3VvjQqVkePgw4w@mail.gmail.com>\nSubject: yeah buddy\nTo: testing1234@rdioplaylist.thinkingserious.com\nContent-Type: multipart/alternative; boundary=047d7b33da0630eb5704e355c20c\n", "to"=>"testing1234@rdioplaylist.thinkingserious.com", "html"=>"<div dir=\"ltr\">testing this &lt;strong&gt;stuff&lt;/strong&gt;</div>\n", "from"=>"Elmer Thomas SendGrid <elmer.thomas@sendgrid.com>", "text"=>"testing this <strong>stuff</strong>\n", "attachments"=>"0"}
+  Rendered emailer/send_email.erb (0.1ms)
+
+Sent mail to elmer.thomas@sendgrid.com (5.9ms)
+Date: Wed, 07 Aug 2013 01:11:16 -0700
+From: elmer.thomas@sendgrid.com
+To: Elmer Thomas SendGrid <elmer.thomas@sendgrid.com>
+Message-ID: <52020124f33f9_45013fc3d543c53c48977@Retina-MacBook-Pro-ThinkingSerious.local.mail>
+Subject: Thanks for signing up
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi ,
+
+Thanks for trying out SendGrid with EnginYard!
+
+With Best Regards,
+
+Elmer Thomas
+Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/emails" for 127.0.0.1 at 2013-08-07 01:11:21 -0700
+
+ActionController::RoutingError (No route matches [POST] "/users/emails"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (12.3ms)
+
+
+Started POST "/parse" for 127.0.0.1 at 2013-08-07 01:11:21 -0700
+Processing by EmailsController#parse as HTML
+  Parameters: {"headers"=>"Received: by 127.0.0.1 with SMTP id DPR2Ylo53a Wed, 07 Aug 2013 07:59:00 +0000 (UTC)\nReceived: from mail-lb0-f172.google.com (mail-lb0-f172.google.com [209.85.217.172]) by mx2.sendgrid.net (Postfix) with ESMTPS id 4EDDA1B2B303 for <what@rdioplaylist.thinkingserious.com>; Wed,  7 Aug 2013 07:58:58 +0000 (UTC)\nReceived: by mail-lb0-f172.google.com with SMTP id o7so1286957lbv.31 for <what@rdioplaylist.thinkingserious.com>; Wed, 07 Aug 2013 00:58:50 -0700 (PDT)\nX-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=20120113; h=x-gm-message-state:mime-version:from:date:message-id:subject:to :content-type; bh=M//h5SXHgVljqOcqHh3cnzbv+/TaIoY8bDrcQ9BXnbI=; b=IZjPtotYfBkYIaP0j0QuPWw/dKmKmqWJJddEsA+iy7vhsHwq+FbJxh+hP/XjdueiEu PIIWj49GyfRrC8hllbB442e6dyHG1D3ahx67dH00COMdTARQGgcqz3Wt/SnKQyO98MTw 63JBewPK7RM09QGSNA9qCIKurU7pr0qp5z+D9t2lwRxbdYbaD8F2hzFdjGfrZ7djLeeQ x/zIkNbJL3+2Ew0AY8ZfbY6vmcgsqNoCr11ddGWhn/YfEYnMwpKXSMey7GIH982Ut7iA MeQFSePAJxaB6cVPMSh9JnGVySUQtObZoyw0V6w1NKr4DQBLf77irQCk360OHoKZB/e7 khbA==\nX-Gm-Message-State: ALoCoQkjSLz+C9/vtZMzJEEX/U35c5Phn7/Y0fFYRn2u+Z/7OhOy0maTXLfgQwLFT1GmLNux9OC5\nX-Received: by 10.152.28.37 with SMTP id y5mr866044lag.0.1375860713660; Wed, 07 Aug 2013 00:31:53 -0700 (PDT)\nMIME-Version: 1.0\nReceived: by 10.114.12.234 with HTTP; Wed, 7 Aug 2013 00:31:33 -0700 (PDT)\nFrom: Elmer Thomas <Elmer@ThinkingSerious.com>\nDate: Wed, 7 Aug 2013 00:31:33 -0700\nMessage-ID: <CA+7FioO+VD63sbqqcbso13GD3nAX7NzNs28ztf0TJFtDfNvkmg@mail.gmail.com>\nSubject: Testing Test\nTo: what@rdioplaylist.thinkingserious.com\nContent-Type: multipart/alternative; boundary=089e0158ca021930d704e35689e8\n", "dkim"=>"none", "to"=>"what@rdioplaylist.thinkingserious.com", "html"=>"<div dir=\"ltr\">Testing Woooo</div>\n", "from"=>"Elmer Thomas <Elmer@ThinkingSerious.com>", "text"=>"Testing Woooo\n", "envelope"=>"{\"to\":[\"what@rdioplaylist.thinkingserious.com\"],\"from\":\"info@elmerthomas.com\"}", "attachments"=>"0", "subject"=>"Testing Test", "charsets"=>"{\"to\":\"UTF-8\",\"html\":\"ISO-8859-1\",\"subject\":\"UTF-8\",\"from\":\"UTF-8\",\"text\":\"ISO-8859-1\"}", "SPF"=>"none"}
+  Rendered emailer/send_email.erb (0.0ms)
+
+Sent mail to Elmer@ThinkingSerious.com (5.8ms)
+Date: Wed, 07 Aug 2013 01:11:21 -0700
+From: elmer.thomas@sendgrid.com
+To: Elmer Thomas <Elmer@ThinkingSerious.com>
+Message-ID: <520201294f98e_45013fc3d54cd780490f0@Retina-MacBook-Pro-ThinkingSerious.local.mail>
+Subject: Thanks for signing up
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi ,
+
+Thanks for trying out SendGrid with EnginYard!
+
+With Best Regards,
+
+Elmer Thomas
+Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gang_weis/6" for 127.0.0.1 at 2013-08-07 01:11:22 -0700
+
+ActionController::RoutingError (No route matches [GET] "/gang_weis/6"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (38.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-07 01:11:24 -0700
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/parse" for 127.0.0.1 at 2013-08-07 01:11:24 -0700
+Processing by EmailsController#parse as HTML
+  Parameters: {"headers"=>"Received: by 127.0.0.1 with SMTP id VnjaW4rP0N Wed, 07 Aug 2013 07:02:11 +0000 (UTC)\nReceived: from mail-pa0-f45.google.com (mail-pa0-f45.google.com [209.85.220.45]) by mx2.sendgrid.net (Postfix) with ESMTPS id 0F2C31B2ADEF for <sendgrid@rdioplaylist.thinkingserious.com>; Wed,  7 Aug 2013 07:02:11 +0000 (UTC)\nReceived: by mail-pa0-f45.google.com with SMTP id bg4so1794815pad.18 for <sendgrid@rdioplaylist.thinkingserious.com>; Wed, 07 Aug 2013 00:02:10 -0700 (PDT)\nDKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.com; s=ga1; h=mime-version:from:date:message-id:subject:to:content-type; bh=VXIm9OlWQDr0San0AkeNbPhhZq8t0mnXFB5rCp8GmJQ=; b=AeanYkkbyEr6IrLWM8Qopsi2ykBTtM4e6N8LQXqH0D/T0RecB3b8biHx9/0lMI6mq6 B1yAmMTYC/cdKXN7QBaKRTnR41EChtrH1ylRJ7lNtJGGsKOUMUXatVuGu7I8XNP3pI8f c5ksPk1LEFaTqSvq2rKwzq/7EILUVoXiJmLas=\nX-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=20120113; h=x-gm-message-state:mime-version:from:date:message-id:subject:to :content-type; bh=VXIm9OlWQDr0San0AkeNbPhhZq8t0mnXFB5rCp8GmJQ=; b=IPVJUe0wsfEpU6r1kXkhmPhLBFQaqQ8WQ9051qjt9FjDKjzjPTUt3mjEYapiLvwIzE IZdPaVy3Oo1v+d1z/8edJkP5AV0E2DLkwrp3VDIWFZ4po065FZ324noWkzHZOnN77/Dk 33eP1+Yn3rHj7ycoqc+4dKNpJjw3klGkUGjjLKOM2xf9ld+uuI8qA7xIBavGxFvKMztH 3jwhtXL5aAuj0VdnipEUeNudH3cS6A6cwrdrs1+IEBUk6NR9S76/nlfHy5K9vIZ3Fgkd gzBsIB7o/eHnvqnvnhl2auiBtxlmnMpRdcnbVOxETTzoa8XJPNuf1bYt2srCvtqF+95k +Y4Q==\nX-Gm-Message-State: ALoCoQnMkUjyo4kFB6/Q6vAYbrsMH4bVCdfBM5i2ARRyXz6MQSYxsr++jsUk5Bbsp35gvAuRP58i\nX-Received: by 10.66.235.105 with SMTP id ul9mr2731476pac.112.1375858930384; Wed, 07 Aug 2013 00:02:10 -0700 (PDT)\nMIME-Version: 1.0\nReceived: by 10.70.101.233 with HTTP; Wed, 7 Aug 2013 00:01:50 -0700 (PDT)\nFrom: Elmer Thomas SendGrid <elmer.thomas@sendgrid.com>\nDate: Wed, 7 Aug 2013 00:01:50 -0700\nMessage-ID: <CAD9pwO2bPkBHnXhs2sB0K88exB7=rTsmvQTcU2TwKtTtF60FeA@mail.gmail.com>\nSubject: Tttt\nTo: sendgrid@rdioplaylist.thinkingserious.com\nContent-Type: multipart/alternative; boundary=047d7b15a2d5ce977204e3561eac\n", "dkim"=>"{@sendgrid.com : pass}", "to"=>"sendgrid@rdioplaylist.thinkingserious.com", "html"=>"<div dir=\"ltr\">YYY</div>\n", "from"=>"Elmer Thomas SendGrid <elmer.thomas@sendgrid.com>", "text"=>"YYY\n", "envelope"=>"{\"to\":[\"sendgrid@rdioplaylist.thinkingserious.com\"],\"from\":\"elmer.thomas@sendgrid.com\"}", "attachments"=>"0", "subject"=>"Tttt", "charsets"=>"{\"to\":\"UTF-8\",\"html\":\"ISO-8859-1\",\"subject\":\"UTF-8\",\"from\":\"UTF-8\",\"text\":\"ISO-8859-1\"}", "SPF"=>"pass"}
+  Rendered emailer/send_email.erb (0.0ms)
+
+Sent mail to elmer.thomas@sendgrid.com (6.3ms)
+Date: Wed, 07 Aug 2013 01:11:24 -0700
+From: elmer.thomas@sendgrid.com
+To: Elmer Thomas SendGrid <elmer.thomas@sendgrid.com>
+Message-ID: <5202012cb90af_45013fc3d291ed644914d@Retina-MacBook-Pro-ThinkingSerious.local.mail>
+Subject: Thanks for signing up
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi ,
+
+Thanks for trying out SendGrid with EnginYard!
+
+With Best Regards,
+
+Elmer Thomas
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/parse" for 127.0.0.1 at 2013-08-07 01:11:24 -0700
+Processing by EmailsController#parse as HTML
+  Parameters: {"headers"=>"Received: by 127.0.0.1 with SMTP id ynpXD9brdH Wed, 07 Aug 2013 07:12:05 +0000 (UTC)\nReceived: from mail-pb0-f48.google.com (mail-pb0-f48.google.com [209.85.160.48]) by mx2.sendgrid.net (Postfix) with ESMTPS id 9B99E1B2AE05 for <test33@rdioplaylist.thinkingserious.com>; Wed,  7 Aug 2013 07:12:05 +0000 (UTC)\nReceived: by mail-pb0-f48.google.com with SMTP id ma3so1532576pbc.21 for <test33@rdioplaylist.thinkingserious.com>; Wed, 07 Aug 2013 00:12:05 -0700 (PDT)\nDKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.com; s=ga1; h=mime-version:from:date:message-id:subject:to:content-type; bh=Mba7lOlbfziSmsjz2MrXnSTyNrZyfYem0eng4u8uJpY=; b=UUH2zoFVLlCcFmQRxM/8EjuGkXiFdfNGMwSXz6oiit+uXVhepV9H2qkTbE0oZlCN8Z KHwdybS3e9d3PRySsvbINDkB6TNBKJup33ATtrebk40Y7l0KUQuOd5zrU43u3T61Xnei XPmx5toCs21OUHyzFoayqroSXhvhWWaMJupr4=\nX-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=20120113; h=x-gm-message-state:mime-version:from:date:message-id:subject:to :content-type; bh=Mba7lOlbfziSmsjz2MrXnSTyNrZyfYem0eng4u8uJpY=; b=O+lcGYRpvT8H7weR36YKcKx8WrbddW16MUkb9NPUar9ebf4Thbcc7oJY+tc2ZuzsNn sv3cscjGp3/lCBDOmxpD81IlcKUuNMeTfz2iJD7/dT0VS9WBWDuu+zOdTpN+MNCpLZA3 NReiNOduTAR4/4o+dO0i/2ncFLbtb+F7YjGYj1eeWicdb7hLJdy4YrjWUUBwY8aAtC0E VRKjFQXWdT+98dC0XRWNcpYc3yRwWMU+XPJmiszhnajtZsI4Rbqu6hI/Z+1mxtBjEq6c RlmeJbIrrG+3kKNjlPpR5jHqG8xpk8UtgPsk2oRg1m3Wi3I+V4I9J5BOkxzbpt67SCHU UTUw==\nX-Gm-Message-State: ALoCoQmL7F5fJ5kGRrc2vJS1NPQP6n46nkORLMlGM9uQcKkImUSxtU/JH/T0KbgIolWK8YZULjvE\nX-Received: by 10.66.121.195 with SMTP id lm3mr2840575pab.116.1375859525067; Wed, 07 Aug 2013 00:12:05 -0700 (PDT)\nMIME-Version: 1.0\nReceived: by 10.70.101.233 with HTTP; Wed, 7 Aug 2013 00:11:45 -0700 (PDT)\nFrom: Elmer Thomas SendGrid <elmer.thomas@sendgrid.com>\nDate: Wed, 7 Aug 2013 00:11:45 -0700\nMessage-ID: <CAD9pwO1ODQnR5GinpSiRqwWOHTF4vfqQzMUmviH2EHO1yJC89A@mail.gmail.com>\nSubject: Testing\nTo: test33@rdioplaylist.thinkingserious.com\nContent-Type: multipart/alternative; boundary=047d7b2e0c1740b8cf04e35642df\n", "attachments"=>"0", "dkim"=>"{@sendgrid.com : pass}", "subject"=>"Testing", "to"=>"test33@rdioplaylist.thinkingserious.com", "html"=>"<div dir=\"ltr\">Tester</div>\n", "text"=>"Tester\n", "from"=>"Elmer Thomas SendGrid <elmer.thomas@sendgrid.com>", "envelope"=>"{\"to\":[\"test33@rdioplaylist.thinkingserious.com\"],\"from\":\"elmer.thomas@sendgrid.com\"}", "charsets"=>"{\"to\":\"UTF-8\",\"html\":\"ISO-8859-1\",\"subject\":\"UTF-8\",\"from\":\"UTF-8\",\"text\":\"ISO-8859-1\"}", "SPF"=>"pass"}
+  Rendered emailer/send_email.erb (0.0ms)
+
+Sent mail to elmer.thomas@sendgrid.com (5.8ms)
+Date: Wed, 07 Aug 2013 01:11:24 -0700
+From: elmer.thomas@sendgrid.com
+To: Elmer Thomas SendGrid <elmer.thomas@sendgrid.com>
+Message-ID: <5202012cbd577_45013fc3d2927d7449292@Retina-MacBook-Pro-ThinkingSerious.local.mail>
+Subject: Thanks for signing up
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi ,
+
+Thanks for trying out SendGrid with EnginYard!
+
+With Best Regards,
+
+Elmer Thomas
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/emails" for 127.0.0.1 at 2013-08-07 01:11:24 -0700
+
+ActionController::RoutingError (No route matches [POST] "/users/emails"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (12.2ms)
+
+
+Started POST "/parse" for 127.0.0.1 at 2013-08-07 01:11:25 -0700
+Processing by EmailsController#parse as HTML
+  Parameters: {"headers"=>"Received: by 127.0.0.1 with SMTP id JGPKJGpiig Wed, 07 Aug 2013 07:23:07 +0000 (UTC)\nReceived: from mail-pd0-f175.google.com (mail-pd0-f175.google.com [209.85.192.175]) by mx2.sendgrid.net (Postfix) with ESMTPS id 7FE501B2B035 for <mailer@rdioplaylist.thinkingserious.com>; Wed,  7 Aug 2013 07:23:07 +0000 (UTC)\nReceived: by mail-pd0-f175.google.com with SMTP id 5so1082400pdd.20 for <mailer@rdioplaylist.thinkingserious.com>; Wed, 07 Aug 2013 00:23:07 -0700 (PDT)\nDKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.com; s=ga1; h=mime-version:from:date:message-id:subject:to:content-type; bh=qN8FhfLsobMlylBQJye8Zi0lQZSVBp9FwCB1solbp28=; b=b0MRlfaTGvMelt28y9dp5gzXM+kGN91l1fkvfIlPvD5rdxlZJDu73vfQgs/zcK/X5V UTsbUaVXCjgGnbxA26KokP6woIERjTXLGibknslL4D9Lu6B0sIxnWgplKEZB16LQq9oi u51oJ5sKE3Cvf0Tal9lUomhn/YgzUUnRs1ug8=\nX-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=20120113; h=x-gm-message-state:mime-version:from:date:message-id:subject:to :content-type; bh=qN8FhfLsobMlylBQJye8Zi0lQZSVBp9FwCB1solbp28=; b=GPnLj62VhryYUXVDJnHxZZq9wpLfs1zyxxviQIkzp2z1XoxLaQfLFp7tfLn47ZCZja OfLLnxdbOeafcVkemNxyi2WsA9DRKEGRC36beXz8t2MzqO+cuw5+BeVdjq+Xl2xyRHBV LXAsLzPIz/s27FGFOPydb61JhCHHI7KhrT3Q8GfDGTTdVMq5ZjlSYvBOuOP+y+kdO408 aoy6Sejj5rPk9wWYIUiBfC694JzVnVL58c6uW0zXVoGbdRoq72/Jw7Rb3hQ4W/kc/ZG/ Z8b+gi/DAod5Aew7PVKK9R/mjvxL9gcRlZ/6FbuviD86LCXLm6PEH/bslYeakCv8xEuu qK9A==\nX-Gm-Message-State: ALoCoQmipsIMoxIf/Q+vSY6fYQd5dq7RJiZ2aM76RS4u4E50iA4fLwfXbBzbHOzuU0c3Sm7liPUU\nX-Received: by 10.66.231.3 with SMTP id tc3mr2819774pac.167.1375860186983; Wed, 07 Aug 2013 00:23:06 -0700 (PDT)\nMIME-Version: 1.0\nReceived: by 10.70.101.233 with HTTP; Wed, 7 Aug 2013 00:22:46 -0700 (PDT)\nFrom: Elmer Thomas SendGrid <elmer.thomas@sendgrid.com>\nDate: Wed, 7 Aug 2013 00:22:46 -0700\nMessage-ID: <CAD9pwO0qjf_Ljj7W7=i7pSh8MArShV1XpYdysv=xqsg+ERCpJw@mail.gmail.com>\nSubject: Hee Hee\nTo: mailer@rdioplaylist.thinkingserious.com\nContent-Type: multipart/alternative; boundary=047d7b15ab5db4c37304e35669a8\n", "dkim"=>"{@sendgrid.com : pass}", "to"=>"mailer@rdioplaylist.thinkingserious.com", "html"=>"<div dir=\"ltr\">Ha Ha<div><br></div></div>\n", "from"=>"Elmer Thomas SendGrid <elmer.thomas@sendgrid.com>", "text"=>"Ha Ha\n", "envelope"=>"{\"to\":[\"mailer@rdioplaylist.thinkingserious.com\"],\"from\":\"elmer.thomas@sendgrid.com\"}", "attachments"=>"0", "subject"=>"Hee Hee", "charsets"=>"{\"to\":\"UTF-8\",\"html\":\"ISO-8859-1\",\"subject\":\"UTF-8\",\"from\":\"UTF-8\",\"text\":\"ISO-8859-1\"}", "SPF"=>"pass"}
+  Rendered emailer/send_email.erb (0.1ms)
+
+Sent mail to elmer.thomas@sendgrid.com (6.0ms)
+Date: Wed, 07 Aug 2013 01:11:25 -0700
+From: elmer.thomas@sendgrid.com
+To: Elmer Thomas SendGrid <elmer.thomas@sendgrid.com>
+Message-ID: <5202012d21a4f_45013fc3d1f476d8493f9@Retina-MacBook-Pro-ThinkingSerious.local.mail>
+Subject: Thanks for signing up
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi ,
+
+Thanks for trying out SendGrid with EnginYard!
+
+With Best Regards,
+
+Elmer Thomas
+Completed 200 OK in 16ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/parse" for 127.0.0.1 at 2013-08-07 01:11:25 -0700
+Processing by EmailsController#parse as HTML
+  Parameters: {"headers"=>"Received: by 127.0.0.1 with SMTP id VH1Vr5wqmV Wed, 07 Aug 2013 05:32:35 +0000 (UTC)\nReceived: from mail-pa0-f50.google.com (mail-pa0-f50.google.com [209.85.220.50]) by mx2.sendgrid.net (Postfix) with ESMTPS id 4FCCA1B28617 for <email@rdioplaylist.thinkingserious.com>; Wed,  7 Aug 2013 05:32:35 +0000 (UTC)\nReceived: by mail-pa0-f50.google.com with SMTP id fb10so1732469pad.9 for <email@rdioplaylist.thinkingserious.com>; Tue, 06 Aug 2013 22:32:34 -0700 (PDT)\nDKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.com; s=ga1; h=mime-version:from:date:message-id:subject:to:content-type; bh=8z/xvyQBitXPiqnvD70Wqop2dg2o+dIroCW6Ot0WBW8=; b=Tpc0eH2ob1ntIQUKabDbWapyqkF3VQgxrHaQYStLIJVdciX9X999vqkyVV6MrN+TV2 ockttDCRplHkT9W8i6Dwu+Ql9qT3x3xuRhezJkxDDbbrCgbo+tDSOUO947PaCELcRaEw Ggv6aPI7fpdRS9A9D7YGDxUhIukcWHBrIqOWc=\nX-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=20120113; h=x-gm-message-state:mime-version:from:date:message-id:subject:to :content-type; bh=8z/xvyQBitXPiqnvD70Wqop2dg2o+dIroCW6Ot0WBW8=; b=oK0kj++uyha1ahG2r9OzMtbJLlmLZUCSYXz4//SYdy6wN2p99o5TQYPexPMQLrBK1z w6tHnLsFtUeyjKg0/ZBwt5No/WjvUhE8SAwGsx35x4PgLzTYGlCFuZq5FbM70nSpPP3J x9WJOkrd9ClI4Lgu6RHGOsW93a3ATdm+LEml0ztfEFr8W1t/Cl1FwTheaWkLWv9ylfpr A0zLS7uTDgQ1urHCYB86ceafo2ROsjanHcgwUBj8nL7J9Hdxgh0c/5QDQ7N8HqWoiD91 M2NujfwpTRyJnnifkEROfd4Pk7X4DCkS/dmMROKp47ykPF7yQuNL4AXadVFBxziR3WVU ta6g==\nX-Gm-Message-State: ALoCoQl6Zg6eAMvHXrdrukjXZl6SrKheSraDbpHE3ukX5r4EJr1Ccp+uyi+/Bqrx0TkJGbf545vw\nX-Received: by 10.68.223.225 with SMTP id qx1mr1678405pbc.157.1375853554790; Tue, 06 Aug 2013 22:32:34 -0700 (PDT)\nMIME-Version: 1.0\nReceived: by 10.70.101.233 with HTTP; Tue, 6 Aug 2013 22:32:14 -0700 (PDT)\nFrom: Elmer Thomas SendGrid <elmer.thomas@sendgrid.com>\nDate: Tue, 6 Aug 2013 22:32:14 -0700\nMessage-ID: <CAD9pwO37d69E2ny3abEWyC5pem1mRTS1=Kbv36Qu9_iXTaa7fw@mail.gmail.com>\nSubject: Testing\nTo: email@rdioplaylist.thinkingserious.com\nContent-Type: multipart/alternative; boundary=047d7b160515658a8104e354de85\n", "attachments"=>"0", "dkim"=>"{@sendgrid.com : pass}", "subject"=>"Testing", "to"=>"email@rdioplaylist.thinkingserious.com", "html"=>"<div dir=\"ltr\">Test</div>\n", "text"=>"Test\n", "from"=>"Elmer Thomas SendGrid <elmer.thomas@sendgrid.com>", "envelope"=>"{\"to\":[\"email@rdioplaylist.thinkingserious.com\"],\"from\":\"elmer.thomas@sendgrid.com\"}", "charsets"=>"{\"to\":\"UTF-8\",\"html\":\"ISO-8859-1\",\"subject\":\"UTF-8\",\"from\":\"UTF-8\",\"text\":\"ISO-8859-1\"}", "SPF"=>"pass"}
+  Rendered emailer/send_email.erb (0.0ms)
+
+Sent mail to elmer.thomas@sendgrid.com (5.9ms)
+Date: Wed, 07 Aug 2013 01:11:25 -0700
+From: elmer.thomas@sendgrid.com
+To: Elmer Thomas SendGrid <elmer.thomas@sendgrid.com>
+Message-ID: <5202012d2cd2a_45013fc3d1f4719c49451@Retina-MacBook-Pro-ThinkingSerious.local.mail>
+Subject: Thanks for signing up
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi ,
+
+Thanks for trying out SendGrid with EnginYard!
+
+With Best Regards,
+
+Elmer Thomas
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-07 01:11:26 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-08-07 01:11:26 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-07 01:11:26 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-07 01:11:26 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-08-07 01:11:26 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-08-07 01:11:26 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-07 01:11:27 -0700
+
+
+Started POST "/hooks/jira?user_id=ben.thompson" for 127.0.0.1 at 2013-08-07 01:13:23 -0700
+
+ActionController::RoutingError (No route matches [POST] "/hooks/jira"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (11.9ms)
+
+
+Started POST "/hooks/jira?user_id=ben.thompson" for 127.0.0.1 at 2013-08-07 01:14:23 -0700
+
+ActionController::RoutingError (No route matches [POST] "/hooks/jira"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (11.8ms)
+
+
+Started POST "/hooks/jira?user_id=ben.thompson" for 127.0.0.1 at 2013-08-07 01:14:36 -0700
+
+ActionController::RoutingError (No route matches [POST] "/hooks/jira"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (11.8ms)
+
+
+Started POST "/hooks/jira?user_id=ben.thompson" for 127.0.0.1 at 2013-08-07 01:14:36 -0700
+
+ActionController::RoutingError (No route matches [POST] "/hooks/jira"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (12.1ms)
+
+
+Started POST "/hooks/jira?user_id=ben.thompson" for 127.0.0.1 at 2013-08-07 01:14:39 -0700
+
+ActionController::RoutingError (No route matches [POST] "/hooks/jira"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (12.5ms)
+
+
+Started POST "/hooks/jira?user_id=ben.thompson" for 127.0.0.1 at 2013-08-07 01:14:44 -0700
+
+ActionController::RoutingError (No route matches [POST] "/hooks/jira"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (12.4ms)
+
+
+Started POST "/hooks/jira?user_id=ben.thompson" for 127.0.0.1 at 2013-08-07 01:14:51 -0700
+
+ActionController::RoutingError (No route matches [POST] "/hooks/jira"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (11.9ms)
+
+
+Started POST "/hooks/jira?user_id=ben.thompson" for 127.0.0.1 at 2013-08-07 01:14:54 -0700
+
+ActionController::RoutingError (No route matches [POST] "/hooks/jira"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (12.0ms)
+
+
+Started POST "/hooks/jira?user_id=ben.thompson" for 127.0.0.1 at 2013-08-07 01:14:55 -0700
+
+ActionController::RoutingError (No route matches [POST] "/hooks/jira"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (12.7ms)
+
+
+Started POST "/hooks/jira?user_id=ben.thompson" for 127.0.0.1 at 2013-08-07 01:14:59 -0700
+
+ActionController::RoutingError (No route matches [POST] "/hooks/jira"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (12.0ms)
+
+
+Started POST "/hooks/jira?user_id=ben.thompson" for 127.0.0.1 at 2013-08-07 01:15:04 -0700
+
+ActionController::RoutingError (No route matches [POST] "/hooks/jira"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (12.0ms)
+
+
+Started POST "/hooks/jira?user_id=ben.thompson" for 127.0.0.1 at 2013-08-07 01:15:11 -0700
+
+ActionController::RoutingError (No route matches [POST] "/hooks/jira"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/thinkingserious/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (12.4ms)
+
+
+Started POST "/parse" for 127.0.0.1 at 2013-08-07 01:15:31 -0700
+Processing by EmailsController#parse as HTML
+  Parameters: {"headers"=>"Received: by 127.0.0.1 with SMTP id Nlcm4LYuQw Wed, 07 Aug 2013 06:41:44 +0000 (UTC)\nReceived: from mail-pb0-f54.google.com (mail-pb0-f54.google.com [209.85.160.54]) by mx4.sendgrid.net (Postfix) with ESMTPS id A9ECC19DCC1B for <ogtest@rdioplaylist.thinkingserious.com>; Wed,  7 Aug 2013 01:41:44 -0500 (CDT)\nReceived: by mail-pb0-f54.google.com with SMTP id ro12so1508262pbb.41 for <ogtest@rdioplaylist.thinkingserious.com>; Tue, 06 Aug 2013 23:41:44 -0700 (PDT)\nDKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.com; s=ga1; h=mime-version:from:date:message-id:subject:to:content-type; bh=xwhMW9Q9l56SfR0w9x5NNFxAx4KaqnGls7jCc7OjJIw=; b=Dj0xuBQnDvC0qAZ9IAjBcFylphI7vUvXXBAAqI43mS6NXgjgBv5YfLNWpvDli3lDmT SaXFMilZlE++v485WAAKK93JOGh8r3ez4aQ0crfccTE77C99GZqlKgfZTb/piHpEwWfh jOWJ6WXhhUpDJdMB0kdWGBZi/uacr5TbEZbNw=\nX-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=20120113; h=x-gm-message-state:mime-version:from:date:message-id:subject:to :content-type; bh=xwhMW9Q9l56SfR0w9x5NNFxAx4KaqnGls7jCc7OjJIw=; b=AcEI8LopK/jiofCp6GLGucAN+HuAf30JiQlh5Kk2Dhavq8n0d2UUb5n47hm9xoazYH boMDN147Fh3mMpsXkNJAvaXGAVaiOIoGMygf9WrukeOHxvgNXJd0MyJPtEzJP3f1Rqb5 t3rxQAXmzXwda3bEDQgqY7Rt+RgEwkNYxNuyb8Fkf16kTwwg6w3+7fdPVY4F6wF77ldf JxVkcN4BjwgLLdG9F4AavftZ+bn5AQAoEydPJJydQ0Bvh/f9YJUMNxa0TGqTBaNAOeEC H36ZmiIyTv/GlH2dKN11Rb0U6lLeeycwHQbFP0johm9NQBUNZFpzDKEoLeyurIaUfOnf 9m0g==\nX-Gm-Message-State: ALoCoQndDFQ/b5PYt3U8MWC9z6RDoFmjfkrJLBixDChQ42/BmRIawuAvI1deToPZskEFi7fTK8RY\nX-Received: by 10.68.223.225 with SMTP id qx1mr1913992pbc.157.1375857704158; Tue, 06 Aug 2013 23:41:44 -0700 (PDT)\nMIME-Version: 1.0\nReceived: by 10.70.101.233 with HTTP; Tue, 6 Aug 2013 23:41:24 -0700 (PDT)\nFrom: Elmer Thomas SendGrid <elmer.thomas@sendgrid.com>\nDate: Tue, 6 Aug 2013 23:41:24 -0700\nMessage-ID: <CAD9pwO2OariH_=NHZXMzdJqNG5m6fNBdsoJmvRvrNK0SiFbhOw@mail.gmail.com>\nSubject: OG Test\nTo: ogtest@rdioplaylist.thinkingserious.com\nContent-Type: multipart/alternative; boundary=047d7b160515b7dc6d04e355d5dd\n", "dkim"=>"{@sendgrid.com : pass}", "to"=>"ogtest@rdioplaylist.thinkingserious.com", "html"=>"<div dir=\"ltr\">OG Test</div>\n", "from"=>"Elmer Thomas SendGrid <elmer.thomas@sendgrid.com>", "text"=>"OG Test\n", "envelope"=>"{\"to\":[\"ogtest@rdioplaylist.thinkingserious.com\"],\"from\":\"elmer.thomas@sendgrid.com\"}", "attachments"=>"0", "subject"=>"OG Test", "charsets"=>"{\"to\":\"UTF-8\",\"html\":\"ISO-8859-1\",\"subject\":\"UTF-8\",\"from\":\"UTF-8\",\"text\":\"ISO-8859-1\"}", "SPF"=>"pass"}
+  Rendered emailer/send_email.erb (0.0ms)
+
+Sent mail to elmer.thomas@sendgrid.com (6.0ms)
+Date: Wed, 07 Aug 2013 01:15:31 -0700
+From: elmer.thomas@sendgrid.com
+To: Elmer Thomas SendGrid <elmer.thomas@sendgrid.com>
+Message-ID: <52020223702d1_45013fc3d1ecf16049570@Retina-MacBook-Pro-ThinkingSerious.local.mail>
+Subject: Thanks for signing up
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi ,
+
+Thanks for trying out SendGrid with EnginYard!
+
+With Best Regards,
+
+Elmer Thomas
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/parse" for 127.0.0.1 at 2013-08-07 01:15:31 -0700
+Processing by EmailsController#parse as HTML
+  Parameters: {"headers"=>"Received: by 127.0.0.1 with SMTP id isFPZgOzwT Wed, 07 Aug 2013 06:28:02 +0000 (UTC)\nReceived: from mail-pa0-f47.google.com (mail-pa0-f47.google.com [209.85.220.47]) by mx4.sendgrid.net (Postfix) with ESMTPS id 4A838285B4DD for <emailtest@rdioplaylist.thinkingserious.com>; Wed,  7 Aug 2013 01:28:02 -0500 (CDT)\nReceived: by mail-pa0-f47.google.com with SMTP id kl13so1770710pab.6 for <emailtest@rdioplaylist.thinkingserious.com>; Tue, 06 Aug 2013 23:28:01 -0700 (PDT)\nDKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.com; s=ga1; h=mime-version:from:date:message-id:subject:to:content-type; bh=108Bg8cBsls6Wbox07KblkGbIEjy9i64x+/iZ/7eLnA=; b=VG+xgoHNIOb+C8EkW9fCIvkbS43Izif8wxA+Ocb1JursugG3YDUMjikJMThudDEV4R dsfbonwGtbrW6yjYH3vRouiDWaNz3g8q85ZT3S8eVc75xYs1aSduhW9dKXwjhKq1Q4+5 B5EuUTyck0jv4gIlsVHoFNARBVYBv6tBjjzTw=\nX-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=20120113; h=x-gm-message-state:mime-version:from:date:message-id:subject:to :content-type; bh=108Bg8cBsls6Wbox07KblkGbIEjy9i64x+/iZ/7eLnA=; b=fsO6hguFHch+mhSHY3VA3sWz6VkMn8frsnYrnMp1nVEoyauf7Z98Iz7CbMgkVsB1A7 iwcsBfhaPrjBwG7UDBKQV0NllnvTHXgIpdg5JZP4FSX7WZd0455ysJSpJ9NL+UUDbUEf vZjl0fN9IL70OMgJ0PzbEuzh7OIjjPGCIjB8xRVQEwY0geKu70IEBsc1wBEFdxcrT/Bv wgmHGZ4oJORTAMgV6peVxhxMwnkS/+ff4d/f1c+U3oLmVKlN8grWBnpqDNC5kcRweZ0x b/PUSlujEiC6v9yBW1Sa9nhOUUgiAeeREvp09W59aYnHM3vIYJ6SWj+LRRB4locdiWJ7 hjuA==\nX-Gm-Message-State: ALoCoQnwl97jMk20k8QzbfhjFMlLQ4o2PDVp457KFZ5jbVD98CSwEKJ10xphCktdy8uhhSjYzH9N\nX-Received: by 10.66.121.195 with SMTP id lm3mr2679289pab.116.1375856881764; Tue, 06 Aug 2013 23:28:01 -0700 (PDT)\nMIME-Version: 1.0\nReceived: by 10.70.101.233 with HTTP; Tue, 6 Aug 2013 23:27:41 -0700 (PDT)\nFrom: Elmer Thomas SendGrid <elmer.thomas@sendgrid.com>\nDate: Tue, 6 Aug 2013 23:27:41 -0700\nMessage-ID: <CAD9pwO1A3J-2k0bC7P_JfPAW5rzFMOg_6HGGs+Qm9QyMrL47Dw@mail.gmail.com>\nSubject: It works?\nTo: emailtest@rdioplaylist.thinkingserious.com\nContent-Type: multipart/alternative; boundary=047d7b2e0c17b3223d04e355a407\n", "attachments"=>"0", "dkim"=>"{@sendgrid.com : pass}", "subject"=>"It works?", "to"=>"emailtest@rdioplaylist.thinkingserious.com", "html"=>"<div dir=\"ltr\">No way!</div>\n", "from"=>"Elmer Thomas SendGrid <elmer.thomas@sendgrid.com>", "text"=>"No way!\n", "envelope"=>"{\"to\":[\"emailtest@rdioplaylist.thinkingserious.com\"],\"from\":\"elmer.thomas@sendgrid.com\"}", "charsets"=>"{\"to\":\"UTF-8\",\"html\":\"ISO-8859-1\",\"subject\":\"UTF-8\",\"from\":\"UTF-8\",\"text\":\"ISO-8859-1\"}", "SPF"=>"pass"}
+  Rendered emailer/send_email.erb (0.0ms)
+
+Sent mail to elmer.thomas@sendgrid.com (5.8ms)
+Date: Wed, 07 Aug 2013 01:15:31 -0700
+From: elmer.thomas@sendgrid.com
+To: Elmer Thomas SendGrid <elmer.thomas@sendgrid.com>
+Message-ID: <52020223beb2c_45013fc3d1f8a7bc49620@Retina-MacBook-Pro-ThinkingSerious.local.mail>
+Subject: Thanks for signing up
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi ,
+
+Thanks for trying out SendGrid with EnginYard!
+
+With Best Regards,
+
+Elmer Thomas
+Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/parse" for 127.0.0.1 at 2013-08-07 01:18:53 -0700
+Processing by EmailsController#parse as HTML
+  Parameters: {"headers"=>"Received: by 127.0.0.1 with SMTP id jsfwfUwKYJ Wed, 07 Aug 2013 06:36:17 +0000 (UTC)\nReceived: from mail-pb0-f42.google.com (mail-pb0-f42.google.com [209.85.160.42]) by mx4.sendgrid.net (Postfix) with ESMTPS id 1700619D40F1 for <testing1234@rdioplaylist.thinkingserious.com>; Wed,  7 Aug 2013 01:36:17 -0500 (CDT)\nReceived: by mail-pb0-f42.google.com with SMTP id un15so1514863pbc.1 for <testing1234@rdioplaylist.thinkingserious.com>; Tue, 06 Aug 2013 23:36:16 -0700 (PDT)\nDKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.com; s=ga1; h=mime-version:from:date:message-id:subject:to:content-type; bh=L+mv4xrd46RyMzNZnycijSmaKNEeNV/i/ZCPTFo1trg=; b=Sjd+6Yj/ykeyp0RhRqbI8X45UqCjRBjjf2nwkOYQAuQP0SnDI/LN4Buq5wRj3vBKJB r6Us0z4P64MoyRNGj/bkthEnMD8L15gwBbCs1JD/Z0m8eJ9Hhq/eA8W1tIguK1os2qNx Vzlx/wvPQ9Q6DsxgATV9FPBLbypf6UYd4fyFc=\nX-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=20120113; h=x-gm-message-state:mime-version:from:date:message-id:subject:to :content-type; bh=L+mv4xrd46RyMzNZnycijSmaKNEeNV/i/ZCPTFo1trg=; b=gRK7nvmdrybWdlPJkbHPEkbbaXBzjk8sk22b9rT3UNHcuxxsKXM0GL2JXOn4cljBW0 eKALLIz4PohqnLO7m6RqBSK2Bp8mJbp0Ecm8IJcri1lE8GWxqUvDlwnzuRjP95Dv++KJ +2+oky2NOf+z0W1peyviII6QbRucyJj4r9QLbw0BHt+wnj48JwdsaI0Z3Vz24uas6jth ZHs6STVJwootBuqgSaRSA2gv50wwysJNa+MnkoXVMySbVAMNZro8b0uOBKKtTTV4mBXy onZydtZHw9CLfHMokZuBO8sG2km6fe43AZI2HB1zN9omsTsmJy03Y1YVY0ll69Tw0TSM ny4A==\nX-Gm-Message-State: ALoCoQknnMeAdGXRjRuDWKOcwH/rbDbTmfi0n/KKkNM+RmpivJpbu9Nc8LYno2gusqPF5LRMc/9K\nX-Received: by 10.68.234.102 with SMTP id ud6mr2031144pbc.50.1375857376548; Tue, 06 Aug 2013 23:36:16 -0700 (PDT)\nMIME-Version: 1.0\nReceived: by 10.70.101.233 with HTTP; Tue, 6 Aug 2013 23:35:56 -0700 (PDT)\nFrom: Elmer Thomas SendGrid <elmer.thomas@sendgrid.com>\nDate: Tue, 6 Aug 2013 23:35:56 -0700\nMessage-ID: <CAD9pwO2ShS4QSTzp0kH=tN_SpaEVoGCMM1ny3VvjQqVkePgw4w@mail.gmail.com>\nSubject: yeah buddy\nTo: testing1234@rdioplaylist.thinkingserious.com\nContent-Type: multipart/alternative; boundary=047d7b33da0630eb5704e355c20c\n", "attachments"=>"0", "dkim"=>"{@sendgrid.com : pass}", "subject"=>"yeah buddy", "to"=>"testing1234@rdioplaylist.thinkingserious.com", "html"=>"<div dir=\"ltr\">testing this &lt;strong&gt;stuff&lt;/strong&gt;</div>\n", "from"=>"Elmer Thomas SendGrid <elmer.thomas@sendgrid.com>", "text"=>"testing this <strong>stuff</strong>\n", "envelope"=>"{\"to\":[\"testing1234@rdioplaylist.thinkingserious.com\"],\"from\":\"elmer.thomas@sendgrid.com\"}", "charsets"=>"{\"to\":\"UTF-8\",\"html\":\"ISO-8859-1\",\"subject\":\"UTF-8\",\"from\":\"UTF-8\",\"text\":\"ISO-8859-1\"}", "SPF"=>"pass"}
+  Rendered emailer/send_email.erb (0.2ms)
+
+Sent mail to elmer.thomas@sendgrid.com (6.0ms)
+Date: Wed, 07 Aug 2013 01:18:53 -0700
+From: elmer.thomas@sendgrid.com
+To: Elmer Thomas SendGrid <elmer.thomas@sendgrid.com>
+Message-ID: <520202edc9a4d_45013fc3d543d65849773@Retina-MacBook-Pro-ThinkingSerious.local.mail>
+Subject: Thanks for signing up
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi,
+
+Thanks for trying out SendGrid with EngineYard!
+
+With Best Regards,
+
+Elmer Thomas
+Completed 200 OK in 17ms (Views: 0.2ms | ActiveRecord: 0.0ms)

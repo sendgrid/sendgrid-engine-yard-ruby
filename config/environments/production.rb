@@ -10,8 +10,8 @@ SgEyRuby::Application.configure do
        :address => "smtp.sendgrid.net",
        :port => 587,
        :domain => "thinkingserious.com",
-       :user_name => EY::Config.get(:sendgrid, ENV["SENDGRID_USERNAME"]),
-       :password => EY::Config.get(:sendgrid, ENV["SENDGRID_PASSWORD"])
+       :user_name => ENV["SENDGRID_USERNAME"],
+       :password => ENV["SENDGRID_PASSWORD"]
   }
 
   # Code is not reloaded between requests.
