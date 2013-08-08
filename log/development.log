@@ -48496,3 +48496,10 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-08 09:16:17
 
 
 Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-08-08 09:16:17 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (5.9ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateEmails (20130808182005)
+  [1m[35m (55.2ms)[0m  CREATE TABLE `emails` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `to` varchar(255), `from` varchar(255), `date` date, `message` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20130808182005')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
