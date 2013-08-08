@@ -1,0 +1,66 @@
+<html>
+	<head>
+		<title><%= @email.from %> to <%= @email.to %> | Open Emails</title>
+		<link href="//fonts.googleapis.com/css?family=Averia+Serif+Libre:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" src="//cdnjs.cloudflare.com/ajax/libs/normalize/2.1.0/normalize.min.css" />
+		<style>
+			body {
+				background: #ede8c0;
+				font-family: 'Averia Serif Libre', serif;
+				font-size: 18px;
+				padding: 10px;
+			}
+			h1 {
+				float: left;
+				max-width: 200px;
+				padding: 0 40px 0 20px;
+				font-size: 40px;
+			}
+			h1 span {
+				display: block;
+			}
+			h1 .open {
+				font-size: 55px;
+			}
+			.info {
+				padding-top: 45px;
+				padding-bottom: 10px;
+				border-bottom: 1px solid #ccc7a7;
+			}
+			.info p {
+				margin: 2px 0;
+			}
+			article {
+				float: left;
+				max-width: 600px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<h1>
+				<span class="open">Open</span>
+				<span class="emails">Emails</span>
+			</h1>
+			<article>
+				<div class="info">
+					<p>
+						<strong>To:</strong>
+						<%= @email.to %>
+					</p>
+					<p>
+						<strong>From:</strong>
+						<%= @email.from %>
+					</p>
+					<p>
+						<strong>Date:</strong>
+						<%= @email.date %>
+					</p>
+				</div>
+				<div class="email">
+					<%= raw @email.message %>
+				</div>
+			</article>
+		</div>
+	</body>
+</html>

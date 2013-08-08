@@ -8,6 +8,9 @@ SgEyRuby::Application.routes.draw do
 
   # /parse
   match '/parse' => 'emails#parse', :via => :post
+  
+  
+  match '/read' => 'read#openemail', :via => :get
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
