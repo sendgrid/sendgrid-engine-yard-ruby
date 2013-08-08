@@ -48469,3 +48469,30 @@ ActionController::RoutingError (No route matches [GET] "/collections/collections
   Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
   Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
   Rendered /Users/thinkingserious/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (12.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-08 09:16:17 -0700
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 65ms (Views: 43.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-08 09:16:17 -0700
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-08-08 09:16:17 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-08 09:16:17 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-08-08 09:16:17 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-08 09:16:17 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-08 09:16:17 -0700
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-08-08 09:16:17 -0700
