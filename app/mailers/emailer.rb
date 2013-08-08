@@ -1,9 +1,11 @@
 class Emailer < ActionMailer::Base
   default :from => "elmer.thomas@sendgrid.com"
+  domain = "http://yourdomain.com"
   
-  def send_email(params, email)  
-    @url = EY::Config.get('base', 'domain_name') + "/" + "?read=" + email.id.to_s
-    subject = "re: " + params[:from]
-    mail(:to => params[:from], :subject => subject)
+  def send_email(email)  
+    # Contruct the URL to where the email is stored on the web
+    @url = domain + "/" + "?read=" + email.id.to_s
+    subject = "re: " + email.from
+    mail(:to => email.from, :subject => subject)
   end
 end

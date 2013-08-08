@@ -5,6 +5,7 @@ class EmailsController < ApplicationController
   # For all available @params see: http://sendgrid.com/docs/API_Reference/Webhooks/parse.html
   def parse
 
+    # Save the incoming email into our DB
     email = Email.new
     email.to = params[:to]
     email.from = params[:from]
@@ -12,8 +13,8 @@ class EmailsController < ApplicationController
     email.message = params[:subject] + "<br /><br />" + params[:html]
     email.save
 
-    Emailer.send_email(params, email).deliver
-    
+    Emailer.send_email(email).deliver
+
     render :json => { "message" => "OK" }, :status => 200
   end
 end
