@@ -12,7 +12,7 @@ class EmailsController < ApplicationController
     email.message = params[:subject] + "<br /><br />" + params[:html]
     email.save
 
-    Emailer.send_email(params).deliver
+    Emailer.send_email(params, email).deliver
     
     render :json => { "message" => "OK" }, :status => 200
   end
