@@ -29,8 +29,7 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'ey_config'
 
-# Store environment variables. Read more: http://railsapps.github.io/rails-environment-variables.html
-gem 'figaro'
+gem 'dotenv-rails', :groups => [:production, :development, :test]
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

@@ -12,6 +12,7 @@ test/tmp
 test/version_tmp
 tmp
 log/development.log
+.env
 
 # YARD artifacts
 .yardoc
