@@ -10,7 +10,7 @@ SgEyRuby::Application.configure do
        :authentication => :plain,
        :address => "smtp.sendgrid.net",
        :port => 587,
-       :domain => EY::Config.get('base', 'domain_name'),
+       :domain => 'engineyard.com', 
        :user_name => EY::Config.get(:sendgrid, 'SENDGRID_USERNAME'),
        :password => EY::Config.get(:sendgrid, 'SENDGRID_PASSWORD')
   }
