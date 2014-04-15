@@ -1,1 +1,2 @@
-precompile_assets: false # disable asset compilation.
+defaults:
+  precompile_assets: false # disable asset compilation.
